@@ -97,7 +97,18 @@ def preprocess_text(text):
     return torch.tensor(chunks[:MAX_SENT_NUM], dtype=torch.long).unsqueeze(0)
 
 CATEGORIES = ['World News', 'Sports', 'Business', 'Science/Tech']
+@app.errorhandler(404)
+def not_found(e):
+    return jsonify({"error": "Route not found"}), 404
 
+@app.errorhandler(500)
+def server_error(e):
+    return jsonify({"error": "Internal server error"}), 500
+
+# Health check endpoint
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy"}), 200
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
