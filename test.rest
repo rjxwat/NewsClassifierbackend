@@ -1,4 +1,4 @@
-POST https://newsclassifierbackend-1.onrender.com/predict
+POST https://newsclassifierbackend.onrender.com/predict
 Content-Type: application/json
 
 {
