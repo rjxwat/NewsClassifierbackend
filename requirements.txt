@@ -36,7 +36,7 @@ pure_eval==0.2.3
 Pygments==2.19.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
-pywin32==310
+
 pyzmq==26.3.0
 scipy==1.13.1
 six==1.17.0
