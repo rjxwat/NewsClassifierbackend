@@ -80,7 +80,7 @@ cnn_model.eval()
 lstm_model.eval()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 def preprocess_text(text):
     text_clean = re.sub(r'[^\w\s]', ' ', text.lower()).split()

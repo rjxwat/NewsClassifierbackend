@@ -1,0 +1,6 @@
+POST https://newsclassifierbackend-1.onrender.com/predict
+Content-Type: application/json
+
+{
+  "text": "The stock market is experiencing a significant downturn, with major indices falling sharply."
+}
